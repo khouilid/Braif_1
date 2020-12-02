@@ -1,5 +1,6 @@
-public class Functions {
+package Functions;
 
+public class Funcs {
 
     static boolean exercice1(){
         return true;
@@ -79,7 +80,7 @@ public class Functions {
 
 
 
-    public static void main(String[] args) {
+    public static void func() {
 
         System.out.println(exercice1());
         System.out.println(exercice2("CUP OF JAVA"));

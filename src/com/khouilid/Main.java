@@ -1,8 +1,10 @@
 package com.khouilid;
-
+import Collections.Collections;
+import Functions.Funcs;
 import Loops.Loops;
 import Variables.*;
 
+import java.util.Collection;
 import java.util.Scanner;
 
 public class Main {
@@ -30,9 +32,11 @@ public class Main {
 
         }else if(exe_number == 3){
             System.out.println("you choose collections");
+            Collections.main();
 
         }else if(exe_number == 4){
             System.out.println("you choose functions");
+            Funcs.func();
 
 
         }

@@ -8,7 +8,7 @@ public class Loops {
 
         System.out.println("Question 1:");
         int i = 1;
-        while(i <= 100){
+        while(i <= 10){
             System.out.print(i + " / ");
             i++;
         }
@@ -16,10 +16,10 @@ public class Loops {
 
     private static void loop_2(){
         System.out.println("Question 2:");
-
+       //TODO solve Big-0 problem.
         for (Double i = 1D ; i <= 30; i++){
             for(Double j = 2D; j <= 100 ; j++){
-                Double result = (i / j);
+                Double result = (i * j);
                 System.out.print(result + " / ");
             }
         }
