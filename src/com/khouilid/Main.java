@@ -1,5 +1,6 @@
 package com.khouilid;
 
+import Loops.Loops;
 import Variables.*;
 
 import java.util.Scanner;
@@ -25,6 +26,7 @@ public class Main {
 
         }else if(exe_number == 2){
             System.out.println("you choose loop");
+            Loops.loops();
 
         }else if(exe_number == 3){
             System.out.println("you choose collections");

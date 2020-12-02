@@ -15,29 +15,31 @@ public class Variables {
     private static void calcTVA() {
 
         final double TVA = 0.2;
+        Double TTC;
         //get the price
         Scanner var_input = new Scanner(System.in);
         System.out.print("Please enter the product price (DH):");
-        Double prince = var_input.nextDouble();
+        Double HT = var_input.nextDouble();
 
         System.out.print("there is discount? yes/no : ");
         String discount = var_input.next().toLowerCase();
         //check for discount
-        if(discount.equals("yes")){
+        if(discount.equals("yes") || discount.equals("oui")){
             //calculate the discount
-            System.out.print("Enter the discount (DH): ");
-            Double percentage = var_input.nextDouble();
-            System.out.println("the percentage of this discount is : " + ((percentage * 100)/prince) + "%");
-            prince = prince - percentage;
-            prince = prince + (prince * TVA);
+            System.out.print("Enter the discount(%): ");
+            Double remise = var_input.nextDouble();
+            remise = (HT * remise) / 100;
+            HT = HT - remise;
+            System.out.println("the percentage of this discount is : " + remise + "%");
+            TTC = HT + (HT * TVA);
 
 
         }else{
-            prince = prince + (prince * TVA);
+            TTC = HT + (HT * TVA);
             System.out.println("No discount has been applied !!");
         }
 
-        System.out.println("Final price is: " + prince + "DH");
+        System.out.println("Final price is: " + TTC + "DH");
 
 
 
