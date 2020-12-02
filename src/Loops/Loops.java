@@ -1,7 +1,5 @@
 package Loops;
 
-import java.util.Arrays;
-
 public class Loops {
 
     private static void loop_1(){
@@ -14,15 +12,20 @@ public class Loops {
         }
     }
 
+
+    private static void multip(int x){
+         int y = 2;
+         while (y <= 100){
+             System.out.print(x * y + " / ");
+             y++;
+         }
+    }
     private static void loop_2(){
         System.out.println("Question 2:");
-       //TODO solve Big-0 problem.
-        for (Double i = 1D ; i <= 30; i++){
-            for(Double j = 2D; j <= 100 ; j++){
-                Double result = (i * j);
-                System.out.print(result + " / ");
-            }
+        for (int i = 1 ; i <= 30 ; i++){
+             multip(i);
         }
+
     }
 
     private static void loop_3(){
@@ -75,11 +78,13 @@ public class Loops {
     public static void loops(){
        loop_1();
        loop_2();
-       loop_3();
-       loop_4();
-       loop_5();
-       loop_6();
-       loop_7();
+        loop_3();
+        loop_4();
+        loop_5();
+        loop_6();
+        loop_7();
+
+
     }
 
 

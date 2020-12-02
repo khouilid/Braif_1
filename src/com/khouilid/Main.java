@@ -2,16 +2,15 @@ package com.khouilid;
 import Collections.Collections;
 import Functions.Funcs;
 import Loops.Loops;
+import Problimaitic.Problimatic;
 import Variables.*;
-
-import java.util.Collection;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 	    //display choices
-        String[] exercises = {"1 -> Variables", "2 -> Loops", "3 -> Collections", "4 -> Functions"};
+        String[] exercises = {"1 -> Variables", "2 -> Loops", "3 -> Collections", "4 -> Functions", "5 -> Problimatic"};
         for (String exercise : exercises){
             System.out.println(exercise);
         }
@@ -37,6 +36,12 @@ public class Main {
         }else if(exe_number == 4){
             System.out.println("you choose functions");
             Funcs.func();
+
+
+        }
+        else if(exe_number == 5){
+            System.out.println("you choose problimatic");
+            Problimatic.calac_pro();
 
 
         }
