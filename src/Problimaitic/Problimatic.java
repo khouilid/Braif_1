@@ -16,6 +16,8 @@ public class Problimatic {
 
         int wallet = montant - moneyForSchool;
 
+        
+
         wallet = wallet - Cofe_Teckit;
 
         System.out.println("Your moeny for school : " + moneyForSchool + "DH");
