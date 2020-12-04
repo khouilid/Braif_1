@@ -1,31 +1,41 @@
 package Problimaitic;
-
 import java.util.Scanner;
 
 public class Problimatic {
 
+    public static void printOut(int livre, int number_c_b, int wallet , int number_tickit){
+
+         System.out.println("Livre et Fournitures : "+ livre +"MAD");
+         System.out.println("Vous pouvez ensuite acheter :");
+         System.out.println(number_c_b + " cofe");
+         System.out.println(number_c_b + " Carte de recharge prépayer");
+         System.out.println(number_tickit + " billets de TRAME");
+         System.out.println("et il vous restera "+ wallet +" MAD pour les roses blanches.");
 
 
-    public static void calac_pro(){
-        final int Cofe_Teckit = 28;
-        Scanner input = new Scanner(System.in);
-        System.out.print("Please enter the amount (DH): ");
-        int montant = input.nextInt();
+    }
 
-        int moneyForSchool = (int) (montant * 0.75);
 
-        int wallet = montant - moneyForSchool;
+        public static void calac_pro() {
 
-        
+            Scanner price = new Scanner(System.in);
 
-        wallet = wallet - Cofe_Teckit;
+            System.out.print("Combien avez-vous reçu d'argent (MAD) ? : ");
+            int price_initial = price.nextInt();
 
-        System.out.println("Your moeny for school : " + moneyForSchool + "DH");
-        System.out.println("The somme (Cafés, Carte de recharge prépayer , Billets de TRAME) :" + Cofe_Teckit + "DH");
-        if (wallet >= 0){
-            System.out.println("And you still have " + wallet + "DH, to buy your mother some flowers");
-        }else {
-            System.out.println("You don't have any money left.");
+            int livre_Fournitures = (int)(price_initial * 0.75);
+
+            int wallet = price_initial - livre_Fournitures;
+
+            int number_cofe_billet = (wallet / 3) / 10;
+
+            int number_tickit = (wallet / 3) / 8;
+
+            wallet = 2 * ((wallet / 3) % 10) +  (wallet / 3) % 8 + wallet % 3;
+
+            printOut(livre_Fournitures, number_cofe_billet, wallet, number_tickit);
+
+
 
         }
 
@@ -35,6 +45,4 @@ public class Problimatic {
 
 
 
-
-    }
 }
